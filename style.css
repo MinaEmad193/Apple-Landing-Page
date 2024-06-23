@@ -11,6 +11,7 @@ a {
 
 body {
     padding:0 15%;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     color: white;

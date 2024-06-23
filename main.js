@@ -7,6 +7,7 @@ if (localStorage.getItem("main-phone") == null) {
     mainPhone.attributes.src.nodeValue = "./images/0.png"
     localStorage.setItem("current-mood", "gold")
     mood = "gold"
+    document.body.className = mood
 }
 
 
