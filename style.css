@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    --main-color:black;
+    --hover-color:black;
+    padding:0 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    color: white;
+    min-height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .logo {
+        img {
+        width:50px;
+        }
+    }
+
+    nav {
+        display: flex;
+        gap:10px;
+        a {
+            padding:10px;
+            border-radius: 999px;
+            transition: 0.05s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            font-weight:600 ;
+        }
+
+        a:hover, .active-nav {
+            color: var(--hover-color);
+            background-color: white;
+            font-weight:600 ;
+        }
+    }
+    
+}
+
+.ad-cont {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    .phone-info {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        width:50%;
+        button {
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--hover-color);
+            width: fit-content;
+        }
+    }
+    .current-phone {
+        width:25%;
+    }
+}
+
+.phones-category {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    img {
+        width:50px;
+        cursor: pointer;
+        transition: 0.1s;
+    }
+    img:hover {
+        transform: scale(1.1) translateY(-5px);
+    }
+}
+
+.blue {
+    --main-color:rgb(24, 96, 190);
+    --hover-color:rgb(24, 96, 190);
+}
+
+.black {
+    --main-color:#111111;
+    --hover-color:#111111;
+}
+
+.grey {
+    --main-color:rgb(152, 153, 134);
+    --hover-color:rgb(152, 153, 134);
+}
+
+.red {
+    --main-color:rgb(43, 3, 3);
+    --hover-color:rgb(43, 3, 3);
+}
+
+@media (max-width:700px) {
+    header {
+        .logo {
+            img {
+            width:40px;
+            }
+        }
+    
+        nav {
+            gap:5px;
+            a {
+                padding:7px;
+                font-weight:400 ;
+            }
+    
+            a:hover, .active-nav {
+                font-weight:400 ;
+            }
+        }
+        
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        .logo {
+            img {
+            width:35px;
+            }
+        }
+    
+        nav {
+            gap:5px;
+            a {
+                padding:5px;
+                font-size: 14px;
+                font-weight:400 ;
+            }
+    
+            a:hover, .active-nav {
+                font-weight:400 ;
+            }
+        }
+        
+    }
+}
+@media (max-width:500px) {
+    header {
+        align-items: start;
+        .logo {
+            img {
+            width:35px;
+            }
+        }
+    
+        nav {
+            gap:5px;
+            flex-direction: column;
+            a {
+                padding:5px;
+                font-size: 14px;
+                font-weight:400 ;
+            }
+    
+            a:hover, .active-nav {
+                font-weight:400 ;
+            }
+        }
+        
+    }
+    .ad-cont {
+        margin-top: 0;
+        h1 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .current-phone {
+            width: 35%;
+        }
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        padding: 0 10%;
+    }
+    .phones-category {
+        img {
+            width:35px;
+        }
+    }
+}
