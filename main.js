@@ -1,7 +1,14 @@
 let phones = document.querySelectorAll(".phones-category")
 let mainPhone = document.querySelector(".current-phone")
-mainPhone.attributes.src.nodeValue = localStorage.getItem("main phone")
-document.body.className = localStorage.getItem("current mood")
+mainPhone.attributes.src.nodeValue = localStorage.getItem("main-phone")
+document.body.className = localStorage.getItem("current-mood")
+
+if (localStorage.getItem("main-phone") == null) {
+    mainPhone.attributes.src.nodeValue = "./images/0.png"
+    localStorage.setItem("current-mood", "gold")
+    mood = "gold"
+}
+
 
 function currentPhone(src) {
     mainPhone.setAttribute("src", src)
@@ -22,9 +29,9 @@ function currentPhone(src) {
     if (src === "./images/4.png") {
         mood = "red"
     }
-    localStorage.setItem("current mood", mood)
-    localStorage.setItem("main phone", src)
+    localStorage.setItem("current-mood", mood)
+    localStorage.setItem("main-phone", src)
 
-    document.body.className = localStorage.getItem("current mood")
+    document.body.className = localStorage.getItem("current-mood")
 }
 
